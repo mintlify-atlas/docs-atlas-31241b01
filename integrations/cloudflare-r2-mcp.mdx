@@ -26,10 +26,10 @@ The Cloudflare R2 Remote MCP Worker is a Cloudflare Worker that acts as a bridge
 ## What It Replaces
 
 <CardGroup cols={2}>
-  <Card title="No Local MCP Server" icon="server">
+  <Card title="No Local MCP Server" icon="server" href="https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker">
     The Worker runs in Cloudflare's edge network — no process to keep running on your machine.
   </Card>
-  <Card title="No Native R2 Connector" icon="plug">
+  <Card title="No Native R2 Connector" icon="plug" href="https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker">
     The Worker handles all R2 API translation for you, so your AI host doesn't need a built-in R2 integration.
   </Card>
 </CardGroup>
@@ -59,7 +59,7 @@ The Cloudflare R2 Remote MCP Worker is a Cloudflare Worker that acts as a bridge
 
 A minimal `wrangler.toml` config looks like this:
 
-```toml wrangler.toml
+```toml
 name = "r2-mcp-worker"
 main = "src/index.ts"
 compatibility_date = "2024-01-01"
