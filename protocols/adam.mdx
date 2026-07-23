@@ -1,0 +1,71 @@
+---
+title: "A.D.A.M.: Adaptive Depth and Mode for AI Conversations"
+sidebarTitle: "A.D.A.M."
+description: "A.D.A.M. calibrates AI chat depth automatically — keeping simple questions simple and complex tasks from collapsing into noise or overload."
+---
+
+A.D.A.M. (Adaptive Depth and Mode) is a protocol for controlling how deeply an AI responds to your inputs. Most AI assistants operate at a single default depth — they don't know whether you want a one-line answer or a full breakdown, so they guess. A.D.A.M. fixes that by giving you an explicit contract you load before the session. You declare the mode, the AI works to that contract, and the session stays usable instead of drifting into over-explanation or unhelpful brevity.
+
+## The Problem
+
+AI assistants default to one depth level and apply it everywhere. Ask a simple yes-or-no question and you get three paragraphs of hedged context. Ask for a deep technical analysis and you get a summary with bullet points. Neither is what you needed, and neither is easy to fix mid-session without losing the thread.
+
+<Warning>
+  Without depth control, AI sessions either over-explain simple things or
+  under-explain complex ones.
+</Warning>
+
+The session doesn't fail dramatically — it degrades. You spend cycles asking the AI to adjust, it recalibrates briefly, then drifts back to the default. A.D.A.M. replaces that loop with an upfront contract.
+
+## How A.D.A.M. Works
+
+<Steps>
+  <Step title="Define the mode for your task">
+    Before starting work, identify what depth level the current task actually
+    needs. Crisp and direct, or thorough and detailed?
+  </Step>
+  <Step title="Load the A.D.A.M. contract">
+    Paste or reference the protocol into your AI session. This sets the
+    behavioral baseline — the AI now has an explicit contract for how to
+    respond, not just a vague instruction.
+  </Step>
+  <Step title="The AI adapts its response depth">
+    With the contract active, the AI calibrates output length, explanation
+    depth, and caveats to the declared mode rather than its own default.
+  </Step>
+  <Step title="Shift modes as complexity changes">
+    If the work changes scope mid-session, you can switch modes explicitly.
+    A.D.A.M. supports mode transitions without restarting the session.
+  </Step>
+</Steps>
+
+## When to Use It
+
+<CardGroup cols={2}>
+  <Card title="Simple / Direct Work" icon="bolt">
+    When you need crisp answers without an explanation spiral — quick lookups,
+    yes/no decisions, short code fixes, or anything where verbosity is friction.
+  </Card>
+  <Card title="Deep / Complex Work" icon="layer-group">
+    When you need thorough analysis, full reasoning chains, or detailed
+    breakdowns — and a one-liner would leave you with more questions than you
+    started with.
+  </Card>
+</CardGroup>
+
+## Getting Started
+
+<Card
+  icon="arrow-up-right-from-square"
+  title="A.D.A.M. on GitHub"
+  href="https://github.com/XxYouDeaDPunKxX/A.D.A.M.-Adaptive-Depth-and-Mode"
+>
+  Read the full protocol, available modes, and usage instructions in the
+  repository.
+</Card>
+
+<Tip>
+  Paste the repository link into your AI assistant and ask it to explain the
+  modes before loading the protocol. This gives you a working understanding of
+  what each mode does before you commit to one for the session.
+</Tip>

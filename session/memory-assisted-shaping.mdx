@@ -1,0 +1,64 @@
+---
+title: "Memory-Assisted Shaping: Keep Long AI Sessions Coherent"
+sidebarTitle: "Memory Shaping"
+description: "Memory-Assisted Shaping tracks decisions, gates, discarded paths, and source boundaries across long ChatGPT and GPT Project idea-shaping sessions."
+---
+
+Long AI sessions lose coherence. Decisions get re-litigated, discarded paths re-emerge, source boundaries blur. Memory-Assisted Shaping gives these sessions a structure so the thread doesn't break before the final artifact is ready.
+
+## The Coherence Problem
+
+In an unstructured idea-shaping session, context window pressure is your primary enemy. As the session grows, the model begins losing reliable access to earlier reasoning. Decisions made in the first quarter of a session are not automatically held with the same weight as decisions made moments ago. Discarded approaches resurface as if they were never tried. Gates — the checkpoints that confirmed a direction was sound — get forgotten entirely.
+
+The result is drift: the session is still running, but it is no longer coherent. You may not notice until you reach the point where an output should be ready and find that the foundation shifted under you.
+
+<Warning>
+  In a long GPT Project session, earlier decisions can silently reverse themselves as context pressure builds.
+</Warning>
+
+## What Memory-Assisted Shaping Tracks
+
+<CardGroup cols={2}>
+  <Card title="Decisions Made" icon="check-to-slot">
+    What was decided during the session and the reasoning behind it. Logged decisions resist silent reversal under context pressure.
+  </Card>
+  <Card title="Gates Passed or Failed" icon="door-open">
+    Checkpoints the session has cleared — or failed and redirected from. A passed gate confirms a direction is sound; a failed gate explains why a path was closed.
+  </Card>
+  <Card title="Discarded Paths" icon="ban">
+    Approaches that were tried and rejected, along with the reason each was abandoned. Logging discards prevents the session from cycling back to dead ends.
+  </Card>
+  <Card title="Source Boundaries" icon="border-outer">
+    What material is in scope and what is explicitly out. Keeping source boundaries explicit prevents the session from drawing on material that was never authorized.
+  </Card>
+</CardGroup>
+
+## How to Use It
+
+<Steps>
+  <Step title="Load the protocol">
+    Load or paste the Memory-Assisted Shaping protocol at the start of a GPT Project or long chat, before any substantive work begins.
+  </Step>
+  <Step title="Define starting scope">
+    Declare the starting scope and source boundaries clearly. Name what material is in scope and what is explicitly excluded.
+  </Step>
+  <Step title="Log as you work">
+    As the session runs, log decisions, gates, and discarded paths using the protocol's structure. Do not defer this to the end of a session — log in real time.
+  </Step>
+  <Step title="Create a session summary">
+    Before a handoff or a break, create a session summary using the protocol. The summary captures the current state of decisions, open gates, and active source boundaries.
+  </Step>
+  <Step title="Resume from the summary">
+    When resuming, load the summary before continuing work. This restores coherent context so the session picks up from where it actually was, not where the model guesses it was.
+  </Step>
+</Steps>
+
+## Get Memory-Assisted Shaping
+
+<Card
+  title="Memory-Assisted Shaping on GitHub"
+  icon="layer-group"
+  href="https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping"
+>
+  Download the protocol, read the source files, and load it into your next long GPT Project session.
+</Card>

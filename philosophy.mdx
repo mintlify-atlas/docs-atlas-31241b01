@@ -1,0 +1,56 @@
+---
+title: "Why These Tools Exist: The Design Philosophy"
+sidebarTitle: "Philosophy"
+description: "The principles behind MaRCoRe's AI Toolkit — build from real problems, share what works, keep AI-assisted work operational and honest."
+---
+
+The philosophy behind this toolkit is straightforward: build when an idea feels real, when it solves something, and when it seems worth shaping into something other people can try, inspect, or reuse. Nothing here was built to look impressive or to fill a portfolio. These tools exist because specific problems kept appearing in real AI-assisted work and the available options were not solving them.
+
+## The Problem With AI-Assisted Work
+
+AI assistants are useful. They are also quiet about their failures. Context degrades without notice. Sessions accumulate noise. Decisions made two hours ago get reinterpreted. Assumptions drift silently until the output stops matching the intent — and by then, untangling it is expensive.
+
+The specific failure modes that drove this toolkit:
+
+- **Context collapse** — critical decisions, discarded paths, and source boundaries all blur together in long sessions until nothing is trustworthy
+- **Vague outputs** — AI assistants default to open-ended discussion when what is needed is a clear verdict and one next action
+- **Overloaded sessions** — every constraint, idea, working hypothesis, and draft sharing the same space until the AI cannot distinguish what is settled from what is speculation
+- **Invisible drift** — the output gradually shifts away from what was actually asked, without any signal that this is happening
+
+<Warning>
+  AI assistants do not tell you when they have drifted. That is your problem to manage.
+</Warning>
+
+Behavioral contracts, session structure, and review gates exist because passive hope is not a drift management strategy.
+
+## The Design Principles
+
+<AccordionGroup>
+  <Accordion title="Build from real problems">
+    Every tool in this collection started as a solution to a problem MaRCoRe actually encountered. Not a theoretical problem. Not a problem that looked interesting to solve. A problem that was actively costing time and producing bad results. That constraint keeps the tools honest — if it never had to work in practice, it did not get built.
+  </Accordion>
+  <Accordion title="Reduce drift actively">
+    Drift in AI-assisted work is not solved by being more careful or more attentive. It is solved by explicit behavioral contracts that define what the AI should and should not do, session structures that keep concerns separated, and review gates that force pauses before continuation. Hope is not a mechanism. Contracts are.
+  </Accordion>
+  <Accordion title="Force useful decisions">
+    AI assistants are very willing to keep a discussion open indefinitely. That is rarely what is needed. The tools here are designed to produce gates, verdicts, and clear next actions — to take something stuck or vague and land it somewhere specific. Open-ended is the failure mode, not the goal.
+  </Accordion>
+  <Accordion title="Keep messy work usable">
+    Real work is messy. Ideas arrive in the wrong order. Sessions get interrupted. Context gets complicated. The response to that is not to demand clean conditions before starting — it is to build tools that separate concerns, track what matters, and keep working material usable even when the session is not tidy. Messy is the normal state. The tools need to work in it.
+  </Accordion>
+  <Accordion title="Share freely">
+    If a tool solved a real problem, there is a reasonable chance it can solve the same problem for someone else. Sharing without conditions is the default. The tools do not exist behind a paywall, a signup form, or a license that makes reuse difficult. If it works for you, use it. If it does not fit, adapt it or discard it.
+  </Accordion>
+</AccordionGroup>
+
+## What "Human-Directed, AI-Assisted" Means
+
+Every project in this toolkit was created through a specific kind of collaboration. The ideas, the practical structure, the decisions about scope and constraints, and the shape of the final artifact all came from human direction. AI tools helped with drafting, structuring, reviewing, testing phrasing, and refining the output.
+
+That distinction matters because AI assistance does not produce correctness automatically. An AI assistant can draft a protocol, suggest a structure, or surface missing cases — but it cannot decide whether the protocol actually solves the right problem. That judgment is human. The work is human-directed first, AI-assisted second.
+
+This also means these projects should be read critically. They were built carefully, but they are not validated against every context or use case. Read them, test them against your actual situation, and adapt what fits.
+
+<Info>
+  Some projects are rough. Some are weird. Some are more serious than they look at first glance. They are all real.
+</Info>

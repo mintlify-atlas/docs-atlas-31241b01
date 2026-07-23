@@ -1,0 +1,64 @@
+---
+title: "Shaping Frame for Claude: Keep Long Sessions Clear"
+sidebarTitle: "Shaping Frame"
+description: "A protocol for Claude that separates hypotheses, decisions, Claude-generated material, and operator-approved direction so long sessions stay structured and honest."
+---
+
+Long Claude sessions accumulate hypotheses, decisions, generated material, and operator direction — and without structure, these blur together. Shaping Frame for Claude maintains explicit separation between what Claude produced, what you approved, and what's still being tested.
+
+## What It Separates
+
+<CardGroup cols={2}>
+  <Card title="Hypotheses" icon="flask-vial">
+    Ideas under investigation that have not been decided. A hypothesis is live and testable — it is not a direction Claude should act on as if it were approved.
+  </Card>
+  <Card title="Decisions" icon="check-to-slot">
+    Operator-approved direction that Claude must follow. A decision has been explicitly promoted from hypothesis or discussion and carries authority in the session.
+  </Card>
+  <Card title="Claude-Generated Material" icon="wand-magic-sparkles">
+    Outputs produced by Claude during the session. Generated material is a product of the session, not operator truth. It does not inherit authority by existing in the conversation.
+  </Card>
+  <Card title="Operator Direction" icon="user-gear">
+    Explicit instructions from the human in the session. Operator direction is the governing input. It is distinct from what Claude synthesized, summarized, or proposed on its own.
+  </Card>
+</CardGroup>
+
+## Why Claude Specifically
+
+Every AI assistant has its own behavioral tendencies. Claude is excellent at synthesis — drawing threads together, identifying connections, and producing integrated output from complex input. In short sessions, this is a strength. In long sessions, it becomes a liability.
+
+Claude's synthesis tendency can cause it to blend operator direction with its own generated material, particularly across long sessions where the boundary between "what you said" and "what Claude produced in response" has accumulated over many exchanges. The frame is designed for this specific pattern.
+
+<Tip>
+  Claude's tendency to synthesize can cause it to blend operator direction with its own generated material. This frame keeps them separate.
+</Tip>
+
+## How to Use the Shaping Frame
+
+<Steps>
+  <Step title="Load the frame at session start">
+    Load the Shaping Frame at the beginning of a long Claude session, before work begins. The frame needs to be active from the first substantive exchange.
+  </Step>
+  <Step title="Declare starting direction and hypotheses">
+    State your current operator direction — what you have already decided — and list the hypotheses you are bringing into the session to investigate. These are your two starting layers.
+  </Step>
+  <Step title="Label Claude's material as generated">
+    As Claude produces outputs during the session, treat them as generated material rather than decided direction. Claude's synthesis is a contribution to the session, not an authority within it.
+  </Step>
+  <Step title="Promote deliberately">
+    When a hypothesis is confirmed or Claude-generated material is approved, promote it explicitly to a decision using the frame's language. Promotion must be a deliberate operator action, not a drift that happens because material sat in the session long enough.
+  </Step>
+  <Step title="Review at session boundaries">
+    At the end of each session or major work block, review what is decided and what is still under investigation. Clear the ambiguity before carrying context forward.
+  </Step>
+</Steps>
+
+## Get Shaping Frame for Claude
+
+<Card
+  title="Shaping Frame for Claude on GitHub"
+  icon="frame"
+  href="https://github.com/XxYouDeaDPunKxX/shaping-frame-for-claude"
+>
+  Download the protocol and load it into your next long Claude session to keep hypotheses, decisions, and generated material in separate, honest layers.
+</Card>

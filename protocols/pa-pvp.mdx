@@ -1,0 +1,94 @@
+---
+title: "PA-PVP: Adversarial Peer Validation Protocol"
+sidebarTitle: "PA-PVP"
+description: "PA-PVP turns vague plans, artifacts, and stuck decisions into a clear verdict, one next action, and a clean continuation point using adversarial AI review."
+---
+
+PA-PVP is a PLUTONIUM-like adversarial peer validation protocol. The name comes from the review structure: one AI challenges, another defends, and the protocol forces a real verdict out of the process. It was built for the specific failure mode where AI-assisted review keeps producing more open questions, more discussion threads, and more things to consider — but never a decision. PA-PVP closes that loop. You submit a plan, artifact, or stuck decision; the protocol runs it through an adversarial cycle; you get a verdict, one next action, and a point to continue from.
+
+## The Problem It Solves
+
+Standard AI review is additive. Ask an AI to review something and it surfaces concerns, suggests improvements, raises edge cases, and offers alternatives — all useful things that also leave you with more work and no clear answer. The session ends with a longer to-do list, not a verdict.
+
+<Warning>
+  Endless AI back-and-forth without a verdict is a workflow dead end. PA-PVP
+  closes the loop.
+</Warning>
+
+PA-PVP is adversarial by design. The protocol forces the review to produce a decision, not a discussion. If the work passes, you know why. If it fails, you know what to fix. If it's conditional, you know the exact condition.
+
+## Protocol Outputs
+
+Every PA-PVP run produces exactly three outputs:
+
+<CardGroup cols={3}>
+  <Card title="Verdict" icon="gavel">
+    Pass, fail, or conditional. Not "it depends" — a real verdict with the
+    reasoning that produced it.
+  </Card>
+  <Card title="Next Action" icon="arrow-right">
+    One specific thing to do. Not a list of considerations — one action that
+    moves the work forward from the verdict.
+  </Card>
+  <Card title="Continuation Point" icon="bookmark">
+    A clear point to resume from. You don't lose context between review cycles,
+    and the next session knows exactly where to pick up.
+  </Card>
+</CardGroup>
+
+## How It Works
+
+<Steps>
+  <Step title="Submit your work to the protocol">
+    Paste your plan, artifact, or stuck decision into a session running the
+    PA-PVP protocol. The clearer the input, the sharper the verdict.
+  </Step>
+  <Step title="First AI runs an adversarial review">
+    The first AI reviews the submission specifically looking for gaps, weak
+    logic, missing constraints, and assumptions that don't hold. It is not
+    trying to improve the work — it is trying to break it.
+  </Step>
+  <Step title="Second AI challenges the review">
+    A second AI challenges both the original submission and the first review.
+    This surfaces places where the adversarial critique was itself weak,
+    unfair, or missed the actual problem.
+  </Step>
+  <Step title="Protocol synthesizes the final output">
+    PA-PVP synthesizes a verdict from the adversarial cycle, identifies one
+    next action, and marks a clean continuation point for the next session.
+  </Step>
+</Steps>
+
+## When to Use PA-PVP
+
+<AccordionGroup>
+  <Accordion title="Stuck decisions that keep generating discussion">
+    If a decision has been reviewed multiple times and you still don't have a
+    clear answer, PA-PVP forces one. The adversarial structure is designed
+    specifically to break the "more discussion" loop.
+  </Accordion>
+  <Accordion title="Plans that need stress-testing before execution">
+    Run a plan through PA-PVP before committing resources. The adversarial
+    review finds the weak points that a supportive review would smooth over.
+  </Accordion>
+  <Accordion title="AI-generated artifacts that need adversarial review">
+    AI outputs tend to be internally coherent but brittle under challenge.
+    PA-PVP stress-tests the artifact rather than accepting its internal logic
+    at face value.
+  </Accordion>
+  <Accordion title="Work that needs a clear go/no-go verdict">
+    When you need a real decision point — not more considerations — PA-PVP
+    delivers a verdict you can act on.
+  </Accordion>
+</AccordionGroup>
+
+## Get PA-PVP
+
+<Card
+  icon="gavel"
+  title="PA-PVP on GitHub"
+  href="https://github.com/XxYouDeaDPunKxX/PA_PVP-a-PLUTONIUM-like-Adversarial-Peer-Validation-Protocol"
+>
+  Read the full protocol, review structure, and usage instructions in the
+  repository.
+</Card>

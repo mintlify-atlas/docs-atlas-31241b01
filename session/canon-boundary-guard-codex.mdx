@@ -1,0 +1,64 @@
+---
+title: "Canon Boundary Guard for Codex: Separate Cognitive Layers"
+sidebarTitle: "Canon Guard (Codex)"
+description: "A Codex skill that keeps project evidence, chat context, operator instructions, working hypotheses, and model assumptions in distinct, non-collapsing cognitive layers."
+---
+
+In Codex sessions, evidence, context, instructions, hypotheses, and assumptions can blur together. Canon Boundary Guard for Codex is a skill that enforces separation between these layers so each one stays in its proper place.
+
+## Why Layer Separation Matters
+
+The failure mode is subtle. A working hypothesis — something you are testing, not asserting — gets referenced in a few exchanges and starts being treated as established evidence. Chat context that described a past attempt begins to overwrite operator instructions about the current approach. A model assumption, never stated by the operator, quietly becomes the basis for a generated output.
+
+None of these collapses are announced. They happen because the model has no enforced boundary between what it was told and what it inferred, between what you provided and what it generated. The output looks coherent, but its foundation is mixed.
+
+<Warning>
+  When assumptions are treated as canon, everything downstream is built on a lie.
+</Warning>
+
+## The Five Cognitive Layers
+
+<CardGroup cols={2}>
+  <Card title="Project Evidence" icon="database">
+    Verified source material provided by the operator. This is the highest-authority layer — the ground truth the session is built on.
+  </Card>
+  <Card title="Chat Context" icon="messages">
+    Session history and conversation content. Useful for continuity, but not a source file. Chat context does not promote to evidence without explicit operator action.
+  </Card>
+  <Card title="Operator Instructions" icon="terminal">
+    Explicit rules and directives from the operator. These govern how the session runs and take precedence over model inference.
+  </Card>
+  <Card title="Working Hypotheses" icon="flask">
+    Unverified ideas currently under investigation. A hypothesis is being tested — it is not yet a decision and must not be treated as evidence.
+  </Card>
+  <Card title="Model Assumptions" icon="robot">
+    What the model has inferred but was not explicitly told. These must remain visible and challengeable, never silently promoted to any higher layer.
+  </Card>
+</CardGroup>
+
+## Using the Guard in Codex
+
+<Steps>
+  <Step title="Load the skill at session start">
+    Load the Canon Boundary Guard as a Codex skill before any substantive work begins. The guard needs to be active from the first exchange, not applied retroactively.
+  </Step>
+  <Step title="Label incoming material by layer">
+    As material enters the session, explicitly assign it to a layer. Is this project evidence, an operator instruction, or a hypothesis you are testing? Label it before the model acts on it.
+  </Step>
+  <Step title="Check which layer outputs drew from">
+    When the model produces output, identify which layer it drew from. An output sourced from project evidence is more reliable than one sourced from model assumptions. Make the sourcing visible.
+  </Step>
+  <Step title="Challenge boundary-blurring outputs">
+    If output appears to blend layers — treating a hypothesis as evidence, or a model assumption as an operator instruction — challenge it explicitly using the guard's structure before accepting the result.
+  </Step>
+</Steps>
+
+## Get Canon Boundary Guard for Codex
+
+<Card
+  title="Canon Boundary Guard for Codex on GitHub"
+  icon="border-all"
+  href="https://github.com/XxYouDeaDPunKxX/canon-boundary-guard-codex"
+>
+  Download the Codex skill and start enforcing cognitive layer separation from your next session.
+</Card>

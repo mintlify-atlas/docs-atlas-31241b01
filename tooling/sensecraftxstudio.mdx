@@ -1,0 +1,72 @@
+---
+title: "SensecraftXStudio: Ground AI Work Before the Agent Acts"
+sidebarTitle: "SensecraftXStudio"
+description: "A grounding protocol that keeps target, context, assumptions, and final state visible to both operator and agent before any AI-assisted technical work begins."
+---
+
+AI agents acting without a clear, shared understanding of the target state, context, and assumptions produce unpredictable outputs. SensecraftXStudio is a grounding protocol that makes these elements explicit before the agent does anything — keeping the operator in control and the agent properly oriented.
+
+## The Grounding Problem
+
+When an AI assistant doesn't know the current state, the target state, or the constraints, it fills in the gaps. It infers the target from ambiguous phrasing. It assumes the current state matches what the operator seems to expect. It treats unspecified constraints as optional. Those gap-fillings are where things go wrong — not because the assistant is unreliable, but because it was never given the information it needed to act reliably.
+
+<Warning>
+  An AI acting on assumed context is an AI optimizing for the wrong thing.
+</Warning>
+
+The grounding problem is especially acute in technical work, where the gap between what the assistant assumes and what is actually true can cascade into incorrect code, misaligned architecture decisions, or debugging effort spent on the wrong layer.
+
+## What SensecraftXStudio Makes Explicit
+
+<CardGroup cols={2}>
+  <Card title="Target" icon="bullseye">
+    The specific desired end state — what the work is meant to produce, in concrete terms the assistant can orient toward.
+  </Card>
+  <Card title="Context" icon="layer-group">
+    The current actual state and relevant background — what exists now, what has already been tried, and what the assistant needs to know before it acts.
+  </Card>
+  <Card title="Assumptions" icon="magnifying-glass">
+    What the operator and agent are each assuming — surfaced explicitly so conflicts and misalignments can be resolved before work begins.
+  </Card>
+  <Card title="Final State" icon="flag-checkered">
+    What 'done' looks like in concrete terms — so both operator and agent agree on what completion means before the first action is taken.
+  </Card>
+</CardGroup>
+
+## How to Use It
+
+<Steps>
+  <Step title="Open the SensecraftXStudio template before starting technical AI-assisted work">
+    Don't begin a session and then try to add grounding mid-stream. The grounding document is meant to exist before the assistant receives its first instruction.
+  </Step>
+  <Step title="Fill in the target, context, assumptions, and final state">
+    Work through each section with specifics. The more precisely these are written, the more accurately the assistant can orient itself and flag gaps in its own understanding.
+  </Step>
+  <Step title="Share the completed grounding document with your AI assistant at session start">
+    Provide the document as the opening context for the session — before describing the task or asking for any output. The assistant should read the grounding document first.
+  </Step>
+  <Step title="Have the AI confirm its understanding before proceeding">
+    Ask the assistant to summarize the target, context, and final state in its own words. Misalignments caught here cost seconds to fix; misalignments caught after two hours of work cost much more.
+  </Step>
+  <Step title="Reference the grounding document if the session drifts from the target">
+    If the session moves in a direction that feels off, return to the grounding document explicitly. It's the shared reference point for both operator and agent throughout the session.
+  </Step>
+</Steps>
+
+## Best For
+
+<Tip>
+  SensecraftXStudio is especially useful for technical AI work — code generation, system design, debugging — where the gap between assumed and actual context is most costly.
+</Tip>
+
+It fits any situation where the assistant needs to act on a technical system state it cannot directly observe: local environments, existing codebases, partially completed infrastructure, or work where prior decisions matter and aren't visible to the assistant by default.
+
+## Get SensecraftXStudio
+
+<Card
+  title="SensecraftXStudio on GitHub"
+  icon="bullseye"
+  href="https://github.com/XxYouDeaDPunKxX/SensecraftXStudio"
+>
+  Access the grounding protocol template and usage guidance for AI-assisted technical sessions.
+</Card>

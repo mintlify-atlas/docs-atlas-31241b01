@@ -1,0 +1,86 @@
+---
+title: "PA-PVP Mini: Lightweight Adversarial Review Protocol"
+sidebarTitle: "PA-PVP Mini"
+description: "A lightweight version of PA-PVP for quickly stress-testing ideas, prompts, plans, procedures, code, and AI outputs without the full adversarial pipeline."
+---
+
+PA-PVP mini is the lightweight version of PA-PVP. It keeps the core adversarial review logic — find gaps, challenge weak reasoning, surface missing constraints — but strips down the pipeline so it runs faster and fits into everyday work. Where the full PA-PVP is built for formal validation gates and stuck decisions, PA-PVP mini is built for the daily friction: a prompt that might be wrong, a plan that feels thin, a piece of code that passes obvious checks but hasn't been challenged, an AI output that sounds right but hasn't been tested against a critical read.
+
+## PA-PVP vs PA-PVP Mini
+
+<Tabs>
+  <Tab title="PA-PVP Full">
+    **Scope:** Formal adversarial pipeline with a two-AI challenge cycle.
+
+    **Output:** Structured verdict (pass / fail / conditional) + one next action + continuation point.
+
+    **Use when:**
+    - A decision keeps generating discussion and needs a real verdict
+    - A plan is about to be executed and needs serious stress-testing
+    - An artifact needs a formal review gate before it moves forward
+    - You need a documented go/no-go decision with clear reasoning
+
+    The full protocol is deliberate and thorough. It takes more setup and produces a result you can reference and act from across sessions.
+  </Tab>
+  <Tab title="PA-PVP Mini">
+    **Scope:** Single adversarial pass with a lighter output format.
+
+    **Output:** Identified gaps, weak points, and a second-AI challenge of both the original and the first review.
+
+    **Use when:**
+    - You're checking a prompt before sending it
+    - An idea needs a quick pressure test before you invest in it
+    - A code snippet or procedure needs an adversarial read, not a formal review
+    - An AI output looks right but you want it challenged before you use it
+
+    PA-PVP mini is lower overhead. You can run it mid-session without restructuring the workflow around it.
+  </Tab>
+</Tabs>
+
+## What Mini Reviews
+
+PA-PVP mini is built for stress-testing everyday working materials:
+
+<CardGroup cols={2}>
+  <Card title="Ideas and Hypotheses" icon="lightbulb">
+    Surface assumptions that haven't been tested and logic gaps that look solid
+    until something pushes back on them.
+  </Card>
+  <Card title="Prompts and Instructions" icon="terminal">
+    Catch ambiguous framing, missing constraints, and instructions that would
+    produce the wrong output before they're sent.
+  </Card>
+  <Card title="Plans and Procedures" icon="list-check">
+    Find the steps that are thin, the dependencies that aren't stated, and
+    the conditions that would make the plan fail.
+  </Card>
+  <Card title="Code Snippets" icon="code">
+    Identify edge cases, missing guards, and logic that works in the obvious
+    case but breaks under pressure.
+  </Card>
+  <Card title="AI-Generated Outputs" icon="robot">
+    Challenge outputs that passed the internal coherence check but haven't
+    been tested against a critical external read.
+  </Card>
+</CardGroup>
+
+## What It Finds
+
+PA-PVP mini looks for four things in every review: **gaps** (what's missing), **weak logic** (what doesn't hold under pressure), **missing constraints** (what's assumed but not stated), and **shaky fixes** (patches that solve the surface problem but leave the underlying issue open).
+
+<Note>
+  PA-PVP mini lets a second AI challenge both the original work AND the
+  previous review — the double-challenge is what gives it teeth. The first
+  adversarial pass finds problems; the second pass tests whether those findings
+  are actually valid or whether the critique itself has gaps.
+</Note>
+
+## Get PA-PVP Mini
+
+<Card
+  icon="magnifying-glass"
+  title="PA-PVP Mini on GitHub"
+  href="https://github.com/XxYouDeaDPunKxX/PA-PVP-mini"
+>
+  Read the full lightweight protocol and usage instructions in the repository.
+</Card>

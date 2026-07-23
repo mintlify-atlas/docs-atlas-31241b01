@@ -1,0 +1,88 @@
+---
+title: "Cloudflare R2 Remote MCP Worker: Bridge ChatGPT to R2 Storage"
+sidebarTitle: "R2 MCP Worker"
+description: "A Cloudflare Worker that gives remote MCP hosts like ChatGPT a personal bridge to your R2 storage — no local server, no native R2 connector needed."
+---
+
+The Cloudflare R2 Remote MCP Worker is a Cloudflare Worker that acts as a bridge between MCP-based AI hosts (like ChatGPT) and your Cloudflare R2 storage. Instead of needing a local MCP server or a native R2 integration, you deploy this worker once and ChatGPT can access your R2 files remotely.
+
+## How It Works
+
+<Steps>
+  <Step title="Deploy the MCP Worker">
+    Deploy the Worker to your Cloudflare account — it runs on Cloudflare's edge network, not on your machine.
+  </Step>
+  <Step title="Configure R2 credentials">
+    Set your R2 bucket name and credentials in the Worker configuration so it can access your storage.
+  </Step>
+  <Step title="Connect your AI host">
+    Point your MCP-based AI host (e.g. ChatGPT with MCP support) to the Worker's MCP endpoint URL.
+  </Step>
+  <Step title="Access your files">
+    The AI can now read, list, and work with files in your R2 bucket through the MCP protocol.
+  </Step>
+</Steps>
+
+## What It Replaces
+
+<CardGroup cols={2}>
+  <Card title="No Local MCP Server" icon="server">
+    The Worker runs in Cloudflare's edge network — no process to keep running on your machine.
+  </Card>
+  <Card title="No Native R2 Connector" icon="plug">
+    The Worker handles all R2 API translation for you, so your AI host doesn't need a built-in R2 integration.
+  </Card>
+</CardGroup>
+
+## Prerequisites
+
+- Cloudflare account with R2 enabled
+- Files mirrored or stored in an R2 bucket
+- An MCP-capable AI host (e.g. ChatGPT with MCP support)
+
+## Deployment
+
+<Steps>
+  <Step title="Clone the repository">
+    Clone the repo from [GitHub](https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker).
+  </Step>
+  <Step title="Configure the Worker">
+    Set your R2 bucket name and credentials in the Worker config file.
+  </Step>
+  <Step title="Deploy with Wrangler">
+    Deploy using `wrangler deploy`. See the repository README for the full deployment instructions.
+  </Step>
+  <Step title="Use the deployed URL as your MCP endpoint">
+    Once deployed, use the Worker's URL as the MCP endpoint in your AI host's connection settings.
+  </Step>
+</Steps>
+
+A minimal `wrangler.toml` config looks like this:
+
+```toml wrangler.toml
+name = "r2-mcp-worker"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[[r2_buckets]]
+binding = "MY_BUCKET"
+bucket_name = "your-bucket-name"
+```
+
+Replace `your-bucket-name` with your actual R2 bucket name. Refer to the repository README for all required fields and secrets configuration.
+
+## Security Note
+
+<Warning>
+  Your R2 credentials and bucket contents are exposed to any MCP host you connect. Use Cloudflare access controls and configure the Worker with the minimum permissions needed.
+</Warning>
+
+## Get R2 MCP Worker
+
+<Card
+  title="Cloudflare R2 Remote MCP Worker"
+  icon="cloud"
+  href="https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker"
+>
+  Deploy the Worker to your Cloudflare account and bridge your AI host to R2 storage.
+</Card>

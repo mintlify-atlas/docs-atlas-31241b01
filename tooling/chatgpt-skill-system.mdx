@@ -1,0 +1,67 @@
+---
+title: "ChatGPT Skill System: Controlled Skill Loading for GPT Projects"
+sidebarTitle: "Skill System"
+description: "A session workflow that gives ChatGPT Projects structured skill loading — boot the core, load named skills, validate external skills before use."
+---
+
+ChatGPT Projects can accumulate instructions and behaviors in ways that become hard to manage. The Skill System introduces a controlled session workflow: boot a core, load named skill packages, and validate any external skills before they enter the project's context. The result is a session where the assistant's active behaviors are deliberate rather than accumulated.
+
+## The Session Workflow
+
+<Steps>
+  <Step title="Boot the core">
+    Initialize the base session with foundational instructions. The core establishes the minimum behavior layer every session shares — before any task-specific skills are added.
+  </Step>
+  <Step title="Load named skills">
+    Activate specific skill packages by name for the current task. Only load what the session actually needs. Named skills extend the core without replacing it.
+  </Step>
+  <Step title="Check external skills">
+    Validate any skills sourced from outside the project before loading. Confirm they are compatible with the core and won't introduce conflicting instructions or unintended behaviors.
+  </Step>
+  <Step title="Run the session">
+    With the core booted and skills loaded, run the session. The loaded skills now shape how ChatGPT responds and assists — and only those skills.
+  </Step>
+  <Step title="Unload between sessions">
+    Reset the skill state at the end of a session to avoid bleed between different projects or tasks. Each session starts clean from the core, not from the residue of the last one.
+  </Step>
+</Steps>
+
+## What a Skill Package Is
+
+A skill is a named set of instructions, behaviors, and constraints that can be loaded and unloaded as a unit. Unlike system prompt instructions that are always active, skills are modular — load what you need for the current task, nothing more.
+
+Each skill has a defined scope. A writing style skill doesn't carry debugging behaviors. A review skill doesn't carry generation behaviors. This separation keeps the assistant's active behavior set small, coherent, and predictable for the task at hand.
+
+## Why Controlled Loading Matters
+
+Unmanaged instruction accumulation is one of the most common ways ChatGPT Projects degrade. Instructions added over time start to overlap, contradict, or blend in ways the operator didn't intend.
+
+<Warning>
+  Loading too many instructions at once causes the model to blend behaviors in unintended ways. The Skill System keeps each skill's scope clean.
+</Warning>
+
+Controlled loading means you always know what is active and why. When behavior is unexpected, you have a clear structure to inspect rather than a monolithic instruction block to untangle.
+
+## Skill Types
+
+<AccordionGroup>
+  <Accordion title="Core Skills">
+    Foundational behaviors always loaded at session start. The core is the baseline — it defines how the assistant operates before any task-specific skills are applied. Keep the core small and stable; it should change rarely.
+  </Accordion>
+  <Accordion title="Named Skills">
+    Specific packages loaded on demand for a task. Named skills extend the session's capabilities without modifying the core. Load a named skill when a task requires it; unload it when the task is done.
+  </Accordion>
+  <Accordion title="External Skills">
+    Third-party or community skill packages loaded from outside the project. External skills must be validated before use — checked for compatibility with the core and for instructions that might conflict with existing named skills.
+  </Accordion>
+</AccordionGroup>
+
+## Get the ChatGPT Skill System
+
+<Card
+  title="ChatGPT Skill System on GitHub"
+  icon="puzzle-piece"
+  href="https://github.com/XxYouDeaDPunKxX/ChatGPT-SKILL-SYSTEM"
+>
+  Access the Skill System workflow, skill package templates, and session boot instructions.
+</Card>

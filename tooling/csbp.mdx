@@ -1,0 +1,67 @@
+---
+title: "CSBP: Codex Shared Best Practices Worth Reusing"
+sidebarTitle: "CSBP"
+description: "A small companion layer for Codex that collects practices worth reusing across projects — too useful to discard, but not strong enough to become project rules."
+---
+
+Not every useful Codex practice is strong enough to become a project rule. CSBP (Codex Shared Best Practice) is a lightweight companion layer that captures these practices — keeping them accessible and reusable without inflating the ruleset.
+
+## The Middle Ground Problem
+
+Project rules should be few and enforced strictly. A ruleset that grows to accommodate every useful-but-optional practice becomes noise — operators stop reading it, and the rules that matter get buried alongside the ones that don't.
+
+But practices that aren't captured anywhere get lost entirely. A session pattern that worked well last week is forgotten by next month. A prompt format that reliably produces clean output exists only in one operator's memory. Without somewhere to put these practices, the accumulated knowledge of working with Codex dissipates.
+
+<Note>
+  CSBP is the place for practices that are "worth trying" rather than "must follow."
+</Note>
+
+The distinction matters. A rule demands compliance. A shared practice offers a tested starting point that an operator can adopt, adapt, or set aside based on the actual task.
+
+## What Goes in CSBP
+
+<AccordionGroup>
+  <Accordion title="Session Patterns">
+    Ways of structuring a Codex session that tend to produce better results — how to open a session, how to frame a complex task, how to break work into stages that Codex handles well. These are structural habits, not hard constraints.
+  </Accordion>
+  <Accordion title="Output Conventions">
+    Formatting and presentation patterns worth reusing across sessions. When a particular output structure makes review or handoff easier, it belongs here — available for operators who want it without being mandated for those who don't.
+  </Accordion>
+  <Accordion title="Review Habits">
+    Lightweight checks worth running before accepting AI output. Not full audit protocols — those belong in project rules if required. These are quick, habitual checks that catch common issues without adding significant overhead.
+  </Accordion>
+  <Accordion title="Reusable Prompts">
+    Tested prompt patterns for common Codex tasks. When a particular prompt reliably produces the right kind of output for a task type, that prompt pattern is worth preserving and sharing rather than rediscovering each time.
+  </Accordion>
+</AccordionGroup>
+
+## How to Use CSBP
+
+<Steps>
+  <Step title="Browse the CSBP collection on GitHub to find relevant practices">
+    Review the collection before a session to see if any practices apply to the task at hand. CSBP is a reference, not a checklist — read it with a specific task in mind.
+  </Step>
+  <Step title="When you find a practice that fits, note it as a session guideline — not a rule">
+    Add it to your session context as an optional reference. Keep it distinct from actual project rules so neither you nor the assistant treats it with more authority than intended.
+  </Step>
+  <Step title="Try it in your next Codex session">
+    Apply the practice during the session and observe whether it actually improves the output or workflow for your specific context. A shared practice is only worth keeping if it works.
+  </Step>
+  <Step title="Evaluate whether to promote or retain">
+    If the practice works consistently across sessions, consider promoting it to a project rule. If it works sometimes but not reliably, leave it as a shared practice. If it doesn't fit your workflow, discard it — CSBP is a starting point, not a mandate.
+  </Step>
+</Steps>
+
+## Contributing to CSBP
+
+CSBP is designed to grow. The collection is useful only if it reflects practices that have actually been tested in real Codex sessions — not theoretical advice. If you develop a Codex practice worth sharing, the structure is designed to accept contributions. A practice that solved a real problem for your workflow is exactly the kind of thing the collection is meant to hold.
+
+## Get CSBP
+
+<Card
+  title="CSBP on GitHub"
+  icon="book-bookmark"
+  href="https://github.com/XxYouDeaDPunKxX/CSBP-Codex-Shared-Best-Practice"
+>
+  Browse the Codex Shared Best Practice collection and contribute practices from your own sessions.
+</Card>
